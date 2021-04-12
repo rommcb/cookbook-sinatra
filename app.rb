@@ -15,9 +15,8 @@ csv_file   = File.join(__dir__, 'recipes.csv')
 cookbook   = Cookbook.new(csv_file)
 
 get '/' do
-    # recipes = cookbook.all
-    puts "Hello there!"
-    # puts "#{recipes}"
+    recipes = cookbook.all
+    "#{recipes}"
 end
 
 get '/about' do
